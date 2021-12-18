@@ -12,6 +12,8 @@ public class PlayerInput : MonoBehaviour
     
     public bool SpacePressed { get; private set; }
     
+    public bool Attack { get; private set; }
+    
     void Update()
     {
         HorizontalAxis = Input.GetAxis("Horizontal");
@@ -19,5 +21,6 @@ public class PlayerInput : MonoBehaviour
 
         VerticalAxis = Input.GetAxis("Vertical");
         SpacePressed = Input.GetKeyDown(KeyCode.Space);
+        Attack = Input.GetKeyDown(KeyCode.E);
     }
 }
